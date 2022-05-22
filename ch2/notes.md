@@ -1,10 +1,3 @@
-<style>
-  .image-margin {
-    margin-left: 50px;
-  }
-</style>
-
-
 # Black Hat Python - Chapter 2
 
 **Overview**  
