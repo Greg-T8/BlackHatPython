@@ -1,6 +1,6 @@
 # Black Hat Python - Chapter 2
 
-**Overview**
+**Overview**  
 When you are attacking a network, you may find that you don't have access to tools, like Wireshark, netcat, and a compiler.  However, in many cases Python will be installed, so that's where the value of knowing Python comes into play.
 
 In this chapter, I will create clients, servers, and a TCP proxy.  I'll also create my very own netcat implementation, complete with a command shell.
