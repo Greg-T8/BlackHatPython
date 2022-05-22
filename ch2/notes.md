@@ -1,6 +1,6 @@
 # Black Hat Python - Chapter 2
 
-**TCP Client**
+**TCP Client**  
 The script **tcp_client.py** is an example of using the [socket](https://docs.python.org/3/library/socket.html) module to send and receive data from a host.
 
 There are a couple of assumptions this script makes:
@@ -10,4 +10,4 @@ There are a couple of assumptions this script makes:
 
 Here is an example of what the script returns:
 
-![tcp_client.py results](/images/tcp_clientresults.py)
+![tcp_client.py results](images/tcp_clientresults.png)
