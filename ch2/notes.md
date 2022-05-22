@@ -8,7 +8,7 @@ In this chapter, I will create clients, servers, and a TCP proxy.  I'll also cre
 This chapter is the foundation for subsequent chapters, in which I'll build a host discovery tool, implement cross-platform sniffers, and create a remote trojan framework!
 
 This chapter uses the socket module.
-	• [https://docs.python.org/3/library/socket.html](https://docs.python.org/3/library/socket.html)
+- [https://docs.python.org/3/library/socket.html](https://docs.python.org/3/library/socket.html)
 
 This is the core module for all third-party tools and is all you really need for breaking in and maintaining access to target machines
 
