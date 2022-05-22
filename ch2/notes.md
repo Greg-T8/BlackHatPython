@@ -1,3 +1,10 @@
+<style>
+  .image-margin {
+    margin-left: 50px;
+  }
+</style>
+
+
 # Black Hat Python - Chapter 2
 
 **Overview**  
@@ -10,7 +17,7 @@ This chapter is the foundation for subsequent chapters, in which I'll build a ho
 This chapter uses the socket module.
 - [https://docs.python.org/3/library/socket.html](https://docs.python.org/3/library/socket.html)
 
-This is the core module for all third-party tools and is all you really need for breaking in and maintaining access to target machines
+This is the core module for all third-party tools and is all you really need for breaking in and maintaining access to target machines.
 
 **TCP Client**  
 The script [**tcp_client.py**](tcp_client.py) is an example of using the [socket](https://docs.python.org/3/library/socket.html) module to send and receive data from a host.
@@ -22,11 +29,6 @@ There are a couple of assumptions this script makes:
 
 Here is an example of what the script returns:
 
-
-<p align='center'>
-    <img src=images/tcp_clientresults.png>
+<p align='left'>
+    <img src="images/tcp_clientresults.png" class="image-margin">
 </p>
-
-
-
-![tcp_client.py results](images/tcp_clientresults.png)
