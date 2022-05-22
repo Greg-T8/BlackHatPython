@@ -30,5 +30,5 @@ There are a couple of assumptions this script makes:
 Here is an example of what the script returns:
 
 <p align='left'>
-    <img src="images/tcp_clientresults.png" class="image-margin">
+    <img src="images/test.png" class="image-margin">
 </p>
