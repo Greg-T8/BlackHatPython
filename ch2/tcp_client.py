@@ -1,3 +1,5 @@
+# This is a script from Chapter 2 that sets up a basic TCP client
+
 import socket
 
 target_host = 'www.google.com'
