@@ -24,5 +24,6 @@ Here is an example of what the script returns:
 
 ![tcp_client.py results](images/tcp_clientresults.png)
 
-
-<img align='center' src=images/tcp_clientresults.png>
+<p align='center'>
+    <img src=images/tcp_clientresults.png>
+</p>
