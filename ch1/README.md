@@ -24,6 +24,6 @@ The main block at the bottom is used in two different ways:
 
 ## Setting Up a Python Virtual Environment
 Run the following command to install the Python virtual environment:  
-  ```
+  ```shell
   sudo apt install python3-venv
   ```
