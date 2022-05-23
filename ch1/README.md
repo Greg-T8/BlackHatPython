@@ -27,3 +27,26 @@ Run the following command to install the Python virtual environment:
   ```shell
   sudo apt install python3-venv
   ```
+
+Issue the following command to create a new virtual environment in the directory **venv3**:
+```shell
+python3 -m venv venv3
+```
+The **-m** option specifies the module name.
+
+Issue the following comamnd to activate the environment:
+```
+source venv3/bin/activate
+```
+
+The **source** command executes the command from the current shell.
+
+You can use the **deactivate** command to deactivate the environment.
+
+Here's a look at the directory structure when creating a new environment:
+
+![](/ch1/img/tree.png)
+
+Note that VS Code picks up the virtual environment and automatically activates it for you:
+
+![](/ch1/img/codeactivation.png)
