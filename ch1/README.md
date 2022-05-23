@@ -50,3 +50,17 @@ Here's a look at the directory structure when creating a new environment:
 Note that VS Code picks up the virtual environment and automatically activates it for you:
 
 ![](/ch1/img/codeactivation.png)
+
+
+## Installing a Package
+The book uses the example of installing the **lxml** pacakge. This package is used for processing XML and HTML. 
+- [Python xlxml Package Info](https://pypi.org/project/lxml/)
+- [lxml Project Homepage](https://lxml.de/)
+
+Here's an example showing packaging install:
+
+![](/ch1/img/lxmlinstall.png)
+
+And how to verify the package installation:
+
+![](/ch1/img/lxmlverify.png)
