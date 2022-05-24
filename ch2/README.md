@@ -61,7 +61,7 @@ A couple of things to note:
 
 ![](img/sockstream.png)
 
-3. When connecting, the socket address must specify a tuple in the form of ```(address, port)```.
+3. When connecting, the socket address must specify a tuple in the form of ```(address, port)```, as in ```socket.connect((address, port))```.
 
 ![](img/socketconnect.png)
 
