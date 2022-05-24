@@ -64,3 +64,14 @@ Here's an example showing packaging install:
 And how to verify the package installation:
 
 ![](/ch1/img/lxmlverify.png)
+
+## PIP Search Error
+When you run ```pip search``` to search for packages, you'll encounter an error indicating that PyPi's XMLRPC API is disabled due to unmanageable load. 
+
+![](/ch1/img/pipsearcherror.png)
+
+This is a known issue reported on Python's site [here](https://status.python.org/incidents/grk0k7sz6zkp). The reason is the XML-RPC search endpoint was receiving high traffic from abusive IPs. Right now, it is not possible to search for packages on pypi.org using an API. 
+
+To search, use Python's package index at https://pypi.org.
+
+Note that ```pip install``` still works without issue.
