@@ -8,7 +8,7 @@ I am working this book daily to catch up to speed on the basics of Python usage 
 
 This book has the following chapters:
 - [x] [Chapter 1: Setting Up Your Python Environment](/ch1/README.md)
-- [ ] Chapter 2: Basic Networking Tools
+- [ ] [Chapter 2: Basic Networking Tools](/ch2/README.md)
 - [ ] Chapter 3: Writing a Sniffer
 - [ ] Chapter 4: Owning the Network with Scapy
 - [ ] Chapter 5: Web Hackery
