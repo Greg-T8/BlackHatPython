@@ -15,6 +15,7 @@ This is the core module for all third-party tools and is all you really need for
 ## A Simple TCP Client
 <details>
   <summary>Basic script to set up a TCP client for testing web services</summary>
+
 The ability to quickly create a TCP client comes in handy, because many times you may not have access to tools or even the Internet.
 
 The script [**tcp_client.py**](tcp_client.py) is an example of how to use the [socket](https://docs.python.org/3/library/socket.html) module to send and receive data from a host.
