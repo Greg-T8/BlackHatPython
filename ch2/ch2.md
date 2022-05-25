@@ -13,8 +13,10 @@ This chapter uses the socket module.
 This is the core module for all third-party tools and is all you really need for breaking in and maintaining access to target machines.
 
 ## A Simple TCP Client
+<!--
 <details>
   <summary>Basic script to set up a TCP client for testing web services</summary>
+-->
 
 The ability to quickly create a TCP client comes in handy, because many times you may not have access to tools or even the Internet.
 
@@ -55,17 +57,16 @@ print(response.decode())
 client.close()
 ```
 
-## About the Sockets Module
-1. We create a socket object with the ```AF_INET``` and ```SOCK_STREAM``` parameters. The ```AF_INET``` parameter indicates we'll use a standard IPv4 address or hostname. 
+## Script Details 
+1. When initializing a socket object, you specify two parameters:  `AF_INET` and `SOCK_STREAM`. Both of these parameters are constants. The `AF_INET` parameter indicates the TCP client will use IPv4, and the `SOCK_STREAM` parameter indicates the client will use a TCP connection. 
+[![](img/socketclassdefinition.png)](https://docs.python.org/3/library/socket.html#functions)
 
-![](img/AF_INET.png)
-
-2. When initializing the socket object, ```SOCK_STREAM```, which is a constant, is always required. ```SOCK_STREAM``` indicates this will be a TCP client.
-
+2. When initializing the socket object, ```SOCK_STREAM```, which is a constant, is always required. ```SOCK_STREAM``` indicates the client will use a TCP connection.
 ![](img/sockstream.png)
 
 3. When connecting, the socket address must specify a tuple in the form of ```(address, port)```, as in ```socket.connect((address, port))```.
-
 ![](img/socketconnect.png)
 
 ![](img/socketconnecttuple.png)
+
+<!--</details>-->
