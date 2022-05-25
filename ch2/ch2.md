@@ -13,6 +13,8 @@ This chapter uses the socket module.
 This is the core module for all third-party tools and is all you really need for breaking in and maintaining access to target machines.
 
 ## A Simple TCP Client
+<details>
+  <summary>Click to expand!</summary>
 The ability to quickly create a TCP client comes in handy, because many times you may not have access to tools or even the Internet.
 
 The script [**tcp_client.py**](tcp_client.py) is an example of how to use the [socket](https://docs.python.org/3/library/socket.html) module to send and receive data from a host.
@@ -52,7 +54,7 @@ print(response.decode())
 client.close()
 ```
 
-A couple of things to note:
+## About the Sockets Module
 1. We create a socket object with the ```AF_INET``` and ```SOCK_STREAM``` parameters. The ```AF_INET``` parameter indicates we'll use a standard IPv4 address or hostname. 
 
 ![](img/AF_INET.png)
