@@ -73,12 +73,10 @@ In this example, the script sends the following data: `client.send(b"GET / HTTP/
     - The Python documentation for [Bytes Objects](https://docs.python.org/3/library/stdtypes.html#bytes-objects) indicates the syntax for byte literals is `b<string>`, where string can be enclosed in single or double quotes
     - The contents of the byte string are provided in accordance w/ [RFC 7230 - HTTP/1.1 Message Syntax and Routing](https://datatracker.ietf.org/doc/html/rfc7230) and [RFC 3986 - URL General Syntax](https://datatracker.ietf.org/doc/html/rfc3986). This is a rabbit hole, so I'm just noting that the last `\r\n` is required to terminate the send command.
 
-4. When receiving data, you use the method `socket.recv()`. The value supplied, 4096, is typical for the use case. The return value is a bytes object. 
+4. When receiving data, you use the method `socket.recv()`. The value supplied, 4096, is typical for the use case. The return value is a bytes object.  
 ![](img/socketrecv.png)
 
 5. To view the data, you need to convert the bytes object using the `decode()` method, see [here](https://docs.python.org/3/library/stdtypes.html#bytes.decode).
 
 6. The final step is to mark the socket as closed using the `close()` method. 
 ![](img/socketclose.png)
-
-
