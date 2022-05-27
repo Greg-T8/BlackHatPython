@@ -20,3 +20,5 @@ This book has the following chapters:
 - [ ] Chapter 11: Offensive Forensics
 
 ![](/test.png)
+
+![](/test2.png)
