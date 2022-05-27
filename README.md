@@ -22,3 +22,5 @@ This book has the following chapters:
 ![](/test.png)
 
 ![](/test2.png)
+
+![](/test3.png)
