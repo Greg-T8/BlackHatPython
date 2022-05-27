@@ -4,10 +4,10 @@ This repository is my collection of learnings from reading the book [Black Hat P
 
 <p><a href="https://www.amazon.com/Black-Hat-Python-2nd-Programming/dp/1718501129/ref=sr_1_1?crid=3C97MUYUO4THX&keywords=black+hat+python&qid=1653644862&sprefix=black+hat+python%2Caps%2C83&sr=8-1">
   <img src="BHPCover.png" style="width:200px"/>
-</p>
+</a></p>
 
 This book has the following chapters:
-- [ ] [Chapter 1: Setting Up Your Python Environment](/ch1/ch1.md)
+- [x] [Chapter 1: Setting Up Your Python Environment](/ch1/ch1.md)
 - [ ] [Chapter 2: Basic Networking Tools](/ch2/ch2.md)
 - [ ] Chapter 3: Writing a Sniffer
 - [ ] Chapter 4: Owning the Network with Scapy
