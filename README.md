@@ -18,9 +18,3 @@ This book has the following chapters:
 - [ ] Chapter 9: Fun with Exfiltration
 - [ ] Chapter 10: Windows Privilege Escalation
 - [ ] Chapter 11: Offensive Forensics
-
-![](/test.png)
-
-![](/test2.png)
-
-![](/test3.png)
