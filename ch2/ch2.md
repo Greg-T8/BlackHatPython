@@ -14,10 +14,8 @@ This chapter uses the socket module.
 This is the core module for all third-party tools and is all you really need for breaking in and maintaining access to target machines.
 
 ## A Simple TCP Client
-<!--
 <details>
   <summary>Basic script to set up a TCP client for testing web services</summary>
--->
 
 The ability to quickly create a TCP client comes in handy, because many times you may not have access to tools or even the Internet.
 
@@ -71,7 +69,7 @@ client.close()
 In this example, the script sends the following data: `client.send(b"GET / HTTP/1.1\r\nHost: google.com\r\n\r\n")`. Let's break this down:
     - Per the reference above, the parameter for `send()` must be specified as a bytes object type
     - The Python documentation for [Bytes Objects](https://docs.python.org/3/library/stdtypes.html#bytes-objects) indicates the syntax for byte literals is `b<string>`, where string can be enclosed in single or double quotes
-    - The contents of the byte string are provided in accordance w/ [RFC 7230 - HTTP/1.1 Message Syntax and Routing](https://datatracker.ietf.org/doc/html/rfc7230) and [RFC 3986 - URL General Syntax](https://datatracker.ietf.org/doc/html/rfc3986). This is a rabbit hole, so I'm just noting that the last `\r\n` is required to terminate the send command.
+    - The contents of the byte string are provided in accordance w/ [RFC 7230 - HTTP/1.1 Message Syntax and Routing](https://datatracker.ietf.org/doc/html/rfc7230) and [RFC 3986 - URL General Syntax](https://datatracker.ietf.org/doc/html/rfc3986). Note that to end lines in an HTTP request, you have to use the `\r` (carriage return) and the `\n` (newline) characters.
 
 4. When receiving data, you use the method `socket.recv()`. The value supplied, 4096, is typical for the use case. The return value is a bytes object.  
 ![](img/socketrecv.png)
@@ -80,3 +78,5 @@ In this example, the script sends the following data: `client.send(b"GET / HTTP/
 
 6. The final step is to mark the socket as closed using the `close()` method. 
 ![](img/socketclose.png)
+
+</details>
