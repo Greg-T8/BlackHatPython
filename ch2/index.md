@@ -26,11 +26,7 @@ There are a couple of assumptions this script makes:
 2. The server expects us to send some data first (some servers expect to send data to you first)
 3. The server will always return data to us in a timely fashion
 
-Here is an example of what the script returns:
-
-![](img/tcp_clientresults.png)
-
-Here's the code snippet:
+Here's the code:
 
 ```
 # This script creates a quick TCP client
@@ -56,8 +52,12 @@ print(response.decode())
 client.close()
 ```
 
+Here is an example of the output:
+
+![](img/tcp_clientresults.png)
+
 ## Script Details 
-1. When initializing a socket object, you must specify two required parameters for the constructor function, the socket family and the socket type. Both of these parameters are defined by constants, `AF_INET` and `SOCK_STREAM`. The constant `AF_INET` indicates the TCP client will use IPv4, and the constant `SOCK_STREAM` indicates the client will use a TCP connection.  
+1. When initializing a socket object, you specify two required parameters, the socket family and the socket type. Both of these parameters are defined by constants, `AF_INET` and `SOCK_STREAM`. The constant `AF_INET` indicates the TCP client will use IPv4, and the constant `SOCK_STREAM` indicates the client will use a TCP connection.  
 [![](img/socketclassdefinition.png)](https://docs.python.org/3/library/socket.html#functions)
 
 2. When calling the `Connect()` method on a socket object, you specify a tuple in the form of `(address, port)`, as in `socket.connect((address, port))`.
@@ -69,14 +69,17 @@ client.close()
 In this example, the script sends the following data: `client.send(b"GET / HTTP/1.1\r\nHost: google.com\r\n\r\n")`. Let's break this down:
     - Per the reference above, the parameter for `send()` must be specified as a bytes object type
     - The Python documentation for [Bytes Objects](https://docs.python.org/3/library/stdtypes.html#bytes-objects) indicates the syntax for byte literals is `b<string>`, where string can be enclosed in single or double quotes
-    - The contents of the byte string are provided in accordance w/ [RFC 7230 - HTTP/1.1 Message Syntax and Routing](https://datatracker.ietf.org/doc/html/rfc7230) and [RFC 3986 - URL General Syntax](https://datatracker.ietf.org/doc/html/rfc3986). Note that to end lines in an HTTP request, you have to use the `\r` (carriage return) and the `\n` (newline) characters.
+    - The contents of the byte string are provided in accordance w/ [RFC 7230 - HTTP/1.1 Message Syntax and Routing](https://datatracker.ietf.org/doc/html/rfc7230) and [RFC 3986 - URL General Syntax](https://datatracker.ietf.org/doc/html/rfc3986). To end lines in an HTTP request you have to use the `\r` (carriage return) and the `\n` (newline) characters.
 
 4. When receiving data, you use the method `socket.recv()`. The value supplied, 4096, is typical for the use case. The return value is a bytes object.  
 ![](img/socketrecv.png)
 
-5. To view the data, you need to convert the bytes object using the `decode()` method, see [here](https://docs.python.org/3/library/stdtypes.html#bytes.decode).
+5. To view the HTTP response, you convert the bytes object using the `decode()` method, see [here](https://docs.python.org/3/library/stdtypes.html#bytes.decode).
 
 6. The final step is to mark the socket as closed using the `close()` method. 
 ![](img/socketclose.png)
 
 </details>
+
+## A Simple UDP Client
+
