@@ -28,7 +28,6 @@ There are a couple of assumptions this script makes:
 
 Here is an example of what the script returns:
 
-![](img/tcp_clientresults.png)
 
 Here's the code snippet:
 
