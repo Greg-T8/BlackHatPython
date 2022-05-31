@@ -7,8 +7,8 @@ This repository is my collection of learnings from reading the book [Black Hat P
 </a></p>
 
 This book has the following chapters:
-- [x] [Chapter 1: Setting Up Your Python Environment](/ch1/ch1.md)
-- [ ] [Chapter 2: Basic Networking Tools](/ch2/ch2.md)
+- [x] [Chapter 1: Setting Up Your Python Environment](/ch1/index.md)
+- [ ] [Chapter 2: Basic Networking Tools](/ch2/index.md)
 - [ ] Chapter 3: Writing a Sniffer
 - [ ] Chapter 4: Owning the Network with Scapy
 - [ ] Chapter 5: Web Hackery
