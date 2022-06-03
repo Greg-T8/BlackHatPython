@@ -111,3 +111,8 @@ When executing the script, nothing seems to happen; the command just waits. You 
 ![](img/wireshark-1.png)
 
 However, no data is returned. 
+
+### Script Details
+Here are a few things in how this script differs from the TCP client script:
+- When creating a socket object for UDP connections via `socket.socket(socket.AF_INET, socket.SOCK_DGRAM)`, the constant `SOCK_DGRAM` is used in place of `SOCK_STREAM`.
+- 
