@@ -106,8 +106,10 @@ print(data.decode())
 client.close()
 ```
 
-When executing the script, the data doesn't return anything initially.
+When executing the script, nothing seems to happen; the command just waits. 
 
-After installing Wireshark and running a capture on the loopback interface, you can confirm that data is being sent:
+You can run a Wireshark capture on the loopback interface and confirm that data is being sent:
 
 ![](img/wireshark-1.png)
+
+However, no 
