@@ -106,13 +106,13 @@ print(data.decode())
 client.close()
 ```
 
-When executing the script, nothing seems to happen; the command just waits. You can run a Wireshark capture on the loopback interface and confirm that data is being sent:
+When executing the script, nothing seems to happen; the command just waits. You can run a Wireshark capture on the loopback interface and confirm that data is being sent, but no data is being received:
 
 ![](img/wireshark-1.png)
 
-However, no data is returned. 
+I'm currently investigating the cause of this issue. 
 
 ### Script Details
 Here are a few things in how this script differs from the TCP client script:
 - When creating a socket object for UDP connections via `socket.socket(socket.AF_INET, socket.SOCK_DGRAM)`, the constant `SOCK_DGRAM` is used in place of `SOCK_STREAM`.
-- 
+- The script uses the method `socket.recvfrom()` in place of `socket.recv()`. The method `socket.recvfrom()` receives data from the socket with a return value as a pair in `(bytes, address)`, where *bytes* is a bytes object representing the data received and *address* is the address of the socket sending the data.
