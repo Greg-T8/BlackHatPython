@@ -28,7 +28,7 @@ There are a couple of assumptions this script makes:
 
 Here's the code:
 
-```
+```python
 # This script creates a quick TCP client
 
 import socket
@@ -66,10 +66,7 @@ Here is an example of the output:
 
 3. When sending data, you use the method `socket.send()`.
 ![](img/socketsend.png)
-In this example, the script sends the following data: `client.send(b"GET / HTTP/1.1\r\nHost: google.com\r\n\r\n")`. Let's break this down:
-    - Per the reference above, the parameter for `send()` must be specified as a bytes object type
-    - The Python documentation for [Bytes Objects](https://docs.python.org/3/library/stdtypes.html#bytes-objects) indicates the syntax for byte literals is `b<string>`, where string can be enclosed in single or double quotes
-    - The contents of the byte string are provided in accordance w/ [RFC 7230 - HTTP/1.1 Message Syntax and Routing](https://datatracker.ietf.org/doc/html/rfc7230) and [RFC 3986 - URL General Syntax](https://datatracker.ietf.org/doc/html/rfc3986). To end lines in an HTTP request you have to use the `\r` (carriage return) and the `\n` (newline) characters.
+In this example, the script sends the following data: `client.send(b"GET / HTTP/1.1\r\nHost: google.com\r\n\r\n")`. The data is a basic HTTP request as defined in [RFC 9112](https://www.rfc-editor.org/rfc/rfc9112.html), where `\r\n` is a CRLF (carriage return + line feed).  
 
 4. When receiving data, you use the method `socket.recv()`. The value supplied, 4096, is typical for the use case. The return value is a bytes object.  
 ![](img/socketrecv.png)
@@ -82,11 +79,9 @@ In this example, the script sends the following data: `client.send(b"GET / HTTP/
 </details>
 
 ## A Simple UDP Client
-A Python UDP client is very similar to the TCP client. 
+A Python UDP client is very similar to the TCP client. Here's the code:
 
-Here's the code:
-
-```
+```python
 import socket
 
 target_host = "127.0.0.1"
@@ -106,11 +101,23 @@ print(data.decode())
 client.close()
 ```
 
-When executing the script, nothing seems to happen; the command just waits. You can run a Wireshark capture on the loopback interface and confirm that data is being sent, but no data is being received:
+Don't expect the script to complete! This is because there's no service configured to return data back to the UDP client. 
+
+Use Wireshark to confirm the UDP client actually sends data:
 
 ![](img/wireshark-1.png)
 
-I'm currently investigating the cause of this issue. 
+To validate script completion, use `netcat` to set up a UDP listener:
+
+![](img/netcat-1.png)
+
+Then use `netcat` to send data back to the UDP client:
+
+![](img/netcat-2.png)
+
+Finally, confirm the UDP client receives the data, and the script completes execution:
+
+![](img/udpreceive.png)
 
 ### Script Details
 Here are a few things in how this script differs from the TCP client script:
