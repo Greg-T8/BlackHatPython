@@ -15,7 +15,7 @@ This is the core module for all third-party tools and is all you really need for
 
 ## A Simple TCP Client
 <details>
-  <summary>Basic script to set up a TCP client for testing web services</summary>
+  <summary>TCP client for sending and receiving data.</summary>
 
 The ability to quickly create a TCP client comes in handy because many times you may not have access to tools or even the Internet.
 
@@ -79,7 +79,12 @@ In this example, the script sends the following data: `client.send(b"GET / HTTP/
 </details>
 
 ## A Simple UDP Client
-A Python UDP client is very similar to the TCP client. Here's the code:
+<details>
+  <summary>UDP client for sending and receiving data</summary>
+
+A Python UDP client is very similar to the TCP client. Because UDP is a connectionless protocol, there's no need to call `connect()` beforehand.
+
+Here's the code:
 
 ```python
 import socket
@@ -101,17 +106,17 @@ print(data.decode())
 client.close()
 ```
 
-Don't expect the script to complete! This is because there's no service configured to return data back to the UDP client. 
+Don't expect the script to complete on its own! This is because there's no service configured to return data back to the UDP client. 
 
-Use Wireshark to confirm the UDP client actually sends data:
+However, you can use Wireshark to confirm the UDP client actually sends data:
 
 ![](img/wireshark-1.png)
 
-To validate script completion, use `netcat` to set up a UDP listener:
+To validate script completion, use `netcat` to set up a UDP listener; then run the script to send data to the UDP listener:
 
 ![](img/netcat-1.png)
 
-Then use `netcat` to send data back to the UDP client:
+Use `netcat` to send data back to the UDP client:
 
 ![](img/netcat-2.png)
 
@@ -123,3 +128,4 @@ Finally, confirm the UDP client receives the data, and the script completes exec
 Here are a few things in how this script differs from the TCP client script:
 - When creating a socket object for UDP connections via `socket.socket(socket.AF_INET, socket.SOCK_DGRAM)`, the constant `SOCK_DGRAM` is used in place of `SOCK_STREAM`.
 - The script uses the method `socket.recvfrom()` in place of `socket.recv()`. The method `socket.recvfrom()` receives data from the socket with a return value as a pair in `(bytes, address)`, where *bytes* is a bytes object representing the data received and *address* is the address of the socket sending the data.
+</details>
